@@ -520,7 +520,7 @@ controller.combos.attachCombo("d+b", function () {
 })
 scene.onHitTile(SpriteKindLegacy.Player, 1, function (sprite) {
     if (level == 1) {
-        //game.over(true, effects.starField)
+        /** game.over(true, effects.starField) */
         web.open('https://google.com')
     } else {
         level += 1
