@@ -1,3 +1,12 @@
+namespace web {
+    const CHANNEL = "web"
+
+    function sendJSON(json: any) {
+    const msg = JSON.stringify(json)
+    const buf = Buffer.fromUTF8(msg);
+    control.simmessages.send(CHANNEL, buf)
+    }
+}
 enum SpriteKindLegacy {
     Player,
     Projectile,
@@ -497,9 +506,9 @@ controller.combos.attachCombo("d+b", function () {
     }
 })
 scene.onHitTile(SpriteKindLegacy.Player, 1, function (sprite) {
-    if (level == 1) {
-        game.splash("")
+    if (level == 1)
         game.over(true, effects.starField)
+        web.open('https://google.com')
     } else {
         level += 1
         setLevel(level, mySprite)
