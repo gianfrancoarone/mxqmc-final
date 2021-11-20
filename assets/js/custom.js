@@ -1,3 +1,9 @@
+/**
+ * Add custom javascript in this files
+ * 
+ * To register a constrol simmessages,
+ * use addSimMessageHandler
+ */
 addSimMessageHandler("web", (data) => {
     switch(data.action) {
         case "open":
